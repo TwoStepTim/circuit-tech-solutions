@@ -48,7 +48,7 @@
 
 body {
     font-family: 'Iceland', sans-serif;
-	cursor: url("POINT.png"),auto;
+	cursor: url("/POINT.png"),auto;
     background-image: radial-gradient( #e7cafc 0, #ffffff 50%, #aad6f6 150%);
 	overflow-x: hidden;
 }
@@ -68,6 +68,8 @@ html{
     z-index: 900;
     transition: transform 0.5s ease-out; /* Add transition for smooth movement */
 }
+
+
 h2 {
 	font-size: 44px;
 	font-weight: 700;
@@ -545,7 +547,7 @@ section {
 ===============================================*/
 
 #call-to-action {
-	background-image: url('images/call-to-action.png');
+	background-image: url('/images/call-to-action.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;

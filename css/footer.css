@@ -102,13 +102,15 @@ body{
   .footer-distributed .footer-center p span{
     display:block;
     font-weight: normal;
-    font-size:14px;
+    font-size:10px;
     line-height:2;
   }
   
   .footer-distributed .footer-center p a{
     color:  #e7cafc;
-    text-decoration: none;;
+    text-decoration: none;
+    font-size:20px;
+
   }
   
   .footer-distributed .footer-links a:before {
