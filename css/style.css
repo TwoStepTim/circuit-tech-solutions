@@ -114,12 +114,10 @@ section {
 }
 #hero video{
     width: 30vw;
-    animation: fadeIn 4.5s ease-in forwards;
     height: auto;
     position: absolute;
     right: 0vw;
 	background-color: rgb(0, 0, 0);
-
 }
 
 #background-video {
@@ -129,9 +127,12 @@ section {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  background-attachment: scroll;
+  animation: none;
   }
 .hero-content{
-	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255,.8);
+	border-radius: 10%;
 }
 .title-block {
 	max-width: 700px;
@@ -147,7 +148,9 @@ section {
 	color: #8da2b5;
 	margin-bottom: 0px;
 }
-
+#marketing{
+	margin-top: 25vh;
+}
 .divider {
 	padding: 2rem 0 0;
     margin: 2rem 0 0;
@@ -504,8 +507,23 @@ section {
 	border-radius: 6px;
 	box-shadow: 0 0 1px 0 rgba(0,12,32,0.04), 0 10px 16px 0 rgba(10,31,68,0.06);
 	margin-top: 30px;
+	transition: all 0.3s ease;
 }
-
+.pricing-box:hover {
+	transform: scale(1.05);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.reveal{
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 3s all ease;
+  }
+.reveal.active{
+	transform: translateY(0);
+	opacity: 1;
+  }
+  
 .pricing-box h3 {
 	font-size: 22px;
 	font-weight: 300;
@@ -556,7 +574,7 @@ section {
 .pricing-box .demo {
 	color: #6772e5!important;
 }
-.Price{
+.Price h6, .Price h2{
 	text-align: center;
 }
 /* ==============================================
