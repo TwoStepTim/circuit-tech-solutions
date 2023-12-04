@@ -48,10 +48,18 @@
 
 body {
     font-family: 'Iceland', sans-serif;
-	cursor: url("../images/POINT.png"),auto;
+	/* Set the default cursor to POINT.png */
+	cursor: url("../images/POINT.png"), auto;
+  /* Set the cursor to POINT.2.png when hovering over clickable items */
     background-image: radial-gradient( #e7cafc 0, #ffffff 50%, #aad6f6 150%);
 	overflow-x: hidden;
+	block-size: 100%;
+
 }
+a, button {
+	cursor: url("../images/POINT.2.png"), pointer;
+  }
+
 html{
 	overflow-x: hidden;
 }
@@ -59,13 +67,23 @@ html{
     position: absolute;
     pointer-events: none;
 }
+
+html {
+	scroll-snap-type: y mandatory;
+  }
+  
+section {
+	scroll-snap-align: start;
+	scroll-snap-stop: always;	
+}
+
   
 .rounded {
     width: 30px;
     height: 30px;
     border: 2px solid #4B18A5;
     border-radius: 30%;
-    z-index: 900;
+    z-index: 1000000;
     transition: transform 0.5s ease-out; /* Add transition for smooth movement */
 }
 
@@ -103,6 +121,7 @@ b {
 
 section {
 	padding: 100px 0px;
+	margin-top: 50px;
 }
 @keyframes fadeIn {
     from {
@@ -112,6 +131,43 @@ section {
         opacity: 1;
     }
 }
+.cta{
+	background-color: #a578f4;
+	border-radius: 4px;
+	border: 0;
+	box-shadow: rgba(86, 1, 136, 0.5) 0 -1px 3px 0 inset,rgba(0,44,97,.1) 0 3px 6px 0;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inherit;
+	font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 2px;
+	margin: 0;
+	min-height: 30px;
+	min-width: 10px;
+	padding: 16px 20px;
+	position: relative;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	transition: all .2s cubic-bezier(.22, .61, .36, 1);
+  }
+  
+  .cta:hover {
+	background-color: #7254a5;
+	transform: translateY(-2px);
+  }
+  
+  @media (min-width: 768px) {
+	.cta {
+	  padding: 16px 44px;
+	  min-width: 150px;
+	}
+  }
 #hero video{
     width: 30vw;
     height: auto;
@@ -120,9 +176,10 @@ section {
 	background-color: rgb(0, 0, 0);
 }
 
+
 #background-video {
-	position: fixed;
-	position: absolute;
+  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -130,10 +187,11 @@ section {
   background-attachment: scroll;
   animation: none;
   }
+  
 .hero-content{
 	background-color: rgba(255, 255, 255,.8);
-	border-radius: 10%;
 }
+
 .title-block {
 	max-width: 700px;
 	margin-left: auto;
@@ -143,7 +201,7 @@ section {
 }
 
 .title-block p {
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 300;
 	color: #8da2b5;
 	margin-bottom: 0px;
@@ -152,6 +210,8 @@ section {
 	margin-top: 25vh;
 }
 .divider {
+	margin-top: 50px;
+
 	padding: 2rem 0 0;
     margin: 2rem 0 0;
     border-top: 1px solid #3c3f45;
@@ -292,9 +352,15 @@ section {
 }
 
 .navbar a {
-	color: #53627C !important;
+	color: #53627C ;
+	
 }
-
+.navbar a:hover{
+    background: linear-gradient( #ac57e9 0,  #45aefa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 .nav-right {
 	float: right;
 }
@@ -405,13 +471,15 @@ section {
 ===============================================*/
 
 #marketing p {
-	font-size: 20px;
+	font-size: 25px;
     font-weight: 300;
     color: #8da2b5;
     margin-bottom: 0px;
     padding: 0px;
 }
-
+#marketing h2{
+	font-size: 70px;
+}
 #marketing span {
 	font-weight: 400;
 	color: #0095f7;
@@ -577,6 +645,7 @@ section {
 .Price h6, .Price h2{
 	text-align: center;
 }
+
 /* ==============================================
    8. Call to Action
 ===============================================*/
@@ -626,6 +695,8 @@ section {
 		margin-bottom: 20px;
 		line-height: 1.6;
 	}
+
+	
 	.title-block h2, p {
 		text-align: left;
 		padding: 0px 20px;
@@ -639,29 +710,6 @@ section {
 	#call-to-action {
 		background-image: none;
 		background-color: #0095f7;
-	}
-
-	footer {
-		padding: 60px 25px;
-	}
-	footer h5 {
-		font-size: 18px;
-		margin-top: 30px;
-	}
-	footer li {
-		font-size: 16px;
-		margin-bottom: 15px;
-	}
-	footer p {
-		font-size: 16px;
-	}
-	footer i {
-		font-size: 30px;
-		margin-right: 20px;
-	}
-	footer small {
-		float: left;
-		margin-top: 20px;
 	}
 }
 
@@ -729,6 +777,22 @@ section {
 		display: none;
 	}
 	#hero video{
+		display: none;
+	}
+	#hero{
+		background-image: url("/uy2clpluktvwboeiacd4.jpg");
+		background-size: cover;
+	}
+	.hero-content{
+		background-color: rgba(255, 255, 255,.7);
+	}
+	section{
+		margin-top: 0;
+	}
+	#marketing{
+		margin-top: 0;
+	}
+	.rounded{
 		display: none;
 	}
 }
