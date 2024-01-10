@@ -1,0 +1,49 @@
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+
+.step {
+  flex: 0 1 calc(33.333% - 10px); /* Three steps per row with some spacing */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  margin-right: 10px; /* More space between each step */
+  opacity: .3;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.step:hover {
+  opacity: 1;
+}
+.step p{
+  width: 18vw;
+     text-align: center;
+
+}
+.step img {
+  max-width: AUTO;
+  height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .step {
+    opacity: 1;
+    flex: 0 1 calc(50% - 10px); /* Two steps per row on smaller screens */
+  }
+  .step p{
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .step {
+    opacity: 1;
+    flex: 0 1 100%; /* One step per row on even smaller screens */
+  }
+  .step p{
+    width: auto;
+  }
+}

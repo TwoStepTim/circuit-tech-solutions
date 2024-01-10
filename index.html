@@ -10,11 +10,14 @@
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
-    <link rel="stylesheet" href="/css/footer.css" type="text/css" />
+    <link rel="stylesheet" href="/css/ser.css" type="text/css" />
+    <link rel="stylesheet" href="/css/timeline.css" type="text/css" />
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-GLhlTQ8iK9tGRWYWSKxVEJtPjMqq9/6Z/hRTt8+pjUddI2XmK1Gme/EI0M5wF5J" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/377f518282.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
@@ -31,15 +34,18 @@
   </head>
 
   <body>
-    
+    <div id="page-loader">
+      <img src="/images/Circuit-Logo-EM.png" alt="Loading...">
+    </div>
   <!-- N A V B A R -->
   <nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="icon ion-md-menu"></span>
     </button>
+    <img src="images/logo.22.png" class="img-fluid nav-logo-desktop" alt="Company Logo">
+
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <div class="container">
-      	<img src="images/logo.22.png" class="img-fluid nav-logo-desktop" alt="Company Logo">
         <ul class="navbar-nav ml-auto nav-right" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
           <li class="nav-item nav-custom-link">
             <a class="nav-link" href="index.html">Home <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
@@ -48,10 +54,13 @@
             <a class="nav-link" href="#marketing">Who We Are <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
           </li>
           <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="#Meet-The-Team">Meet The Team <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+            <a class="nav-link" href="#Meet-The-Team">Meet The Team<i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
           </li>
           <li class="nav-item nav-custom-link">
             <a class="nav-link" href="#pricing">Pricing <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
+          </li>
+          <li class="nav-item nav-custom-link">
+            <a class="nav-link" href="#timeline">Procces <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
           </li>
           <li class="nav-item nav-custom-link">
             <a class="nav-link" href="#call-to-action"><button class="cta" role="button">Free Quote</button></a>
@@ -69,7 +78,7 @@
   <section id="hero">
     <div class="container">
       <div class="row">
-        <video id="background-video" loop autoplay muted src="pexels-zetong-li-15315769 (1080p).mp4"></video>
+        <video id="background-video" loop autoplay muted src="/videos/bk.mp4"></video>
          <!-- 
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" id="video">
           <video  autoplay muted src="video.mp4"></video>
@@ -78,7 +87,7 @@
         <div class="container reveal">
         <div class="col-md-12 content-box hero-content">
           <span>Circuit Tech Solutions - All Connected </span>
-          <h1>Circuit - where innovation meets design. <b>transforming visions into extraordinary websites</b></h1>
+          <h1>Circuit - where innovation meets design. <b>Transforming visions into extraordinary websites</b></h1>
           <!-- 
           <p></p>
           <a href="#" class="btn btn-regular">Learn more</a>
@@ -114,19 +123,89 @@
   </section>
   <!-- E N D  M A R K E T I N G -->
 
-  <!-- M E E T   T H E   T E A M -->
+  <!-- S E R V I C E S  -->
+  <section class="container-card  reveal">
+    <section class="card__container">
+      <div class="card__bx" style="--clr: #ac57e9">
+        <div class="card__data">
+          <div class="card__icon">
+            <i class="fa-solid fa-paintbrush"></i>
+          </div>
+          <div class="card__content">
+            <h3>Designing</h3>
+            <p>Where creativity meets functionality, crafting stunning websites that leave a lasting impression.</p>
+            <button  class="open-popup-btn" data-popup-id="popup">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="card__bx" style="--clr: #ffffff">
+        <div class="card__data">
+          <div class="card__icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="card__content">
+            <h3>Develoment</h3>
+            <p>Transforming visions into digital reality through innovative and efficient website development.</p>
+            <button  class="open-popup-btn" data-popup-id="popup2">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="card__bx" style="--clr: #45aefa">
+        <div class="card__data">
+          <div class="card__icon">
+            <i class="fa-brands fa-searchengin"></i>
+          </div>
+          <div class="card__content">
+            <h3>SEO</h3>
+            <p>Elevating your online presence with precision-crafted SEO strategies.</p>
+            <button  class="open-popup-btn" data-popup-id="popup3">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </section>
+  <div class="popup-container" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup')">&times;</span>
+      <h2>Designing</h2>
+      <p>At Circuit Tech Solutions, we pride ourselves on crafting dynamic and visually appealing websites that seamlessly blend form and function. Our web design process begins with a thorough understanding of your business objectives and target audience. We employ a user-centric approach, creating intuitive and engaging interfaces that prioritize a seamless user experience.</p>
+      <!-- Add other contact details or bio information here -->
+    </div>
+  </div>
+  <div class="popup-container" id="popup2">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+      <h2>Develoment</h2>
+      <p>At Circuit Tech Solutions, our development process is driven by innovation and efficiency. We specialize in building robust, scalable websites using the latest technologies. Our expert developers collaborate closely with clients to bring their vision to life, ensuring the creation of functional and high-performance websites. From backend functionality to seamless frontend interactions, we prioritize clean code and optimal user experiences, delivering websites that stand out in the digital landscape."</p>
+      <!-- Add other contact details or bio information here -->
+    </div>
+  </div>
+  <div class="popup-container" id="popup3">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
+      <h2>SEO</h2>
+      <p>At Circuit Tech Solutions, we understand the critical role of Search Engine Optimization (SEO) in maximizing online visibility. Our SEO strategy is data-driven and tailored to each client's unique goals. We employ industry best practices, optimizing website content, meta tags, and structure to enhance search engine rankings. Through keyword research, content optimization, and strategic link-building, we aim to boost organic traffic and ensure your website ranks prominently on search engine results. At Circuit Tech Solutions, we're dedicated to helping your business thrive in the digital landscape through effective and ethical SEO practices.</p>
+      <!-- Add other contact details or bio information here -->
+    </div>
+  </div>
+  <!-- E N D  S E R V I C E S  -->
 
+
+  <!-- M E E T   T H E   T E A M -->
  <section>
   <div class="container reveal" id="Meet-The-Team"  loading="lazy">
     <div class="title-block">
       <h2>Meet The Team</h2>
-      <p>Welcome to the heart of Circuit Tech Solutions, where innovation meets expertise. Our team is a diverse blend of tech enthusiasts, creative minds, and dedicated professionals. Together, we embark on a journey to transform ideas into digital realities. You can explore more about each of us by clicking on our pictures below.</p>
+      <p>Welcome to the heart of Circuit Tech Solutions, where innovation meets expertise. 
+        Our team is a diverse blend of tech enthusiasts, creative minds, and dedicated professionals. Together, 
+        we embark on a journey to transform ideas into digital realities. You can explore more about each of us by clicking on the pictures below.</p>
     </div>
     <div class="row">
+      
         <div class="col-md-4 col-sm-6">
-          
             <div class="our-team">
-                <img src="images/me.jpg">
+                <img src="images/Tim.png">
                 <div class="team-content">
                     <h3 class="title">Timothy J Mims</h3>
                     <span class="post">Chief Executive Officer</span>
@@ -148,11 +227,53 @@
                 </div>
             </div>
         </div>
-    </div>
+  </div>
 </div>
  </section>
-  <!-- E N D M E E T   T H E   T E A M -->
-
+  <!-- E N D   M E E T   T H E   T E A M -->
+ <section id="Portfolio">
+ <div class="containerr reveal">
+  <div class="title-block">
+    <h2>Portfolio</h2>
+  </div>
+  <div class="portfolio-grid">
+    <!-- Repeat this block for each project -->
+    <div class="portfolio-item">
+      <img src="/Work/James.PNG" alt="Project 1">
+      <div class="overlay">
+        <h3>Portfolio</h3>
+        <p>Explore James Smith's portfolio, where every click tells a unique story.</p>
+        <a href="https://circuit-tech-solutions.github.io/Portfolio/" class="live-demo-button">Live Demo</a>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="/Work/LounfeCrew.PNG" alt="Project 1">
+      <div class="overlay">
+        <h3>Lounge Crew</h3>
+        <p>Welcome to Lounge Crew, where the joy of camaraderie meets the spirit of endless fun! </p>
+        <a href="https://circuit-tech-solutions.github.io/Lounge-Crew/" class="live-demo-button">Live Demo</a>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="/Work/Fit.png" alt="Project 1">
+      <div class="overlay">
+        <h3>Circuit Fit</h3>
+        <p>Welcome to Circuit Fit, where fitness meets empowerment!</p>
+        <a href="https://circuit-tech-solutions.github.io/Circuit-Fit/" class="live-demo-button">Live Demo</a>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="/Work/Quantum.PNG" alt="Project 1">
+      <div class="overlay">
+        <h3>Quantum Innovation</h3>
+        <p>Welcome to QuantumForge Innovations, where creativity meets precision in the digital realm.</p>
+        <a href="https://circuit-tech-solutions.github.io/QUANTUMFORGE-INNOVATIONS/" class="live-demo-button">Live Demo</a>
+      </div>
+    </div>
+    <!-- Repeat this block for each project -->
+  </div>
+</div>
+ </section>
   <!-- T E S T I M O N I A L S 
   <section id="testimonials">
     <div class="container">
@@ -193,6 +314,43 @@
     </div>
   </section>
   E N D  T E S T I M O N I A L S -->
+ 
+ <!-- T I M E L I N E -->
+  <section id="timeline">
+    <div class="container reveal">
+      <div class="title-block">
+        <h1>Simple process</h1>  
+        <p id="timeline_p">Hover over each step</p>    
+      </div>
+      <div class="timeline">
+        <div class="step">
+          <img src="/images/Steps1.png" alt="Step 1 Image">
+          <p>Get in touch with us and outline your website requirements. Briefly share details about your business, preferred design elements, and any specific needs.</p>
+        </div>
+        <div class="step">
+          <img src="/images/Steps2.png" alt="Step 2 Image">
+          <p>Provide examples of websites you admire or allow us to showcase designs tailored to your business for your consideration.</p>
+        </div>
+        <div class="step">
+          <img src="/images/Steps3.png" alt="Step 3 Image">
+          <p>Complete a concise brief, detailing your business, objectives, and specific page requirements to guide the development process.</p>
+        </div>
+        <div class="step">
+          <img src="/images/Steps4.png" alt="Step 4 Image">
+          <p>Share content for your website, or opt for our content creation services for an additional fee.</p>
+        </div>
+        <div class="step">
+          <img src="/images/Steps5.png" alt="Step 5 Image">
+          <p>Initiate the project with a 50% prepayment, settling the remaining 50% upon project completion.</p>
+        </div>
+        <div class="step">
+          <img src="/images/Steps6.png" alt="Step 6 Image">
+          <p>Experience a swift turnaround,with your project completed within 7-20 business days after we receive all necessary information from you.</p>
+        </div>
+      </div>
+  </div>
+  </section>
+  <!-- E N D   T I M E L I N E-->
 
   <!-- P R I C I N G -->
   <section id="pricing" loading="lazy">
@@ -205,8 +363,18 @@
         <div class="pricing-box">
           <h3>Price For Website </h3>
           <h6>$250+</h6>
-          <p>To fit your particular demands, we customize our services. So the cost of the site itself can vary depending on everything you need for your site. Our minimum price for a website design is $250 with every client getting a free consultation. If you have to purchase the package below for us to build a website for you, If you are purchasing a package that does not have maintenance or updates, those are separate costs that also vary by request.</p>         
-      </div>
+          <p>To fit your particular demands, we customize our services. The cost of the site can vary depending on the need for your site. 
+            Our minimum price for a website design is $250, with every client receiving a free consultation. 
+            For any website build you must choose from one of the packages below, If you are purchasing a package that does not have maintenance or updates, those are separate costs that also vary by request.</p>         
+            <button class="snipcart-add-item"
+  data-item-id="Website"
+  data-item-price="100"
+  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+  data-item-image="../images/jeremy.png"
+  data-item-name="Base website">
+  Add to cart
+</button>
+          </div>
       
       <h2>Package Deals</h2>
       <div class="row">
@@ -346,12 +514,22 @@
   </footer>
   <!--  E N D  F O O T E R  -->
     
+  <script>
+    window.SnipcartSettings = {
+        publicApiKey: 'ZWU4YjllNmItODM3Ny00ZTBhLTg3MGMtYmZjM2I3Y2E2NmVmNjM4Mzk3NzE4NzMzMDc3NzEz',
+        loadStrategy: 'on-user-interaction',
+        modalStyle: "side",
+    };
 
+    (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+</script>
+
+  
     <!-- External JavaScripts -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
